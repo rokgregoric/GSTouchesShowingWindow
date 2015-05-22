@@ -22,8 +22,9 @@
 		162D899919AA481E00E30F19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 162D899719AA481E00E30F19 /* InfoPlist.strings */; };
 		162D899B19AA481E00E30F19 /* SampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162D899A19AA481E00E30F19 /* SampleAppTests.m */; };
 		162D89B219AC8A3000E30F19 /* GSTouchesShowingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 162D89AF19AC8A3000E30F19 /* GSTouchesShowingWindow.m */; };
-		162D89B319AC8A3000E30F19 /* GSTouchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 162D89B019AC8A3000E30F19 /* GSTouchImage.png */; };
-		162D89B419AC8A3000E30F19 /* GSTouchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 162D89B119AC8A3000E30F19 /* GSTouchImage@2x.png */; };
+		B09122C61B0F4F4100EE48D8 /* GSTouchImage@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = B09122C31B0F4F4100EE48D8 /* GSTouchImage@1x.png */; };
+		B09122C71B0F4F4100EE48D8 /* GSTouchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B09122C41B0F4F4100EE48D8 /* GSTouchImage@2x.png */; };
+		B09122C81B0F4F4100EE48D8 /* GSTouchImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B09122C51B0F4F4100EE48D8 /* GSTouchImage@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +59,9 @@
 		162D899A19AA481E00E30F19 /* SampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAppTests.m; sourceTree = "<group>"; };
 		162D89AE19AC8A3000E30F19 /* GSTouchesShowingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSTouchesShowingWindow.h; path = ../../GSTouchesShowingWindow.h; sourceTree = "<group>"; };
 		162D89AF19AC8A3000E30F19 /* GSTouchesShowingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSTouchesShowingWindow.m; path = ../../GSTouchesShowingWindow.m; sourceTree = "<group>"; };
-		162D89B019AC8A3000E30F19 /* GSTouchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GSTouchImage.png; path = ../../GSTouchImage.png; sourceTree = "<group>"; };
-		162D89B119AC8A3000E30F19 /* GSTouchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "GSTouchImage@2x.png"; path = "../../GSTouchImage@2x.png"; sourceTree = "<group>"; };
+		B09122C31B0F4F4100EE48D8 /* GSTouchImage@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GSTouchImage@1x.png"; sourceTree = "<group>"; };
+		B09122C41B0F4F4100EE48D8 /* GSTouchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GSTouchImage@2x.png"; sourceTree = "<group>"; };
+		B09122C51B0F4F4100EE48D8 /* GSTouchImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GSTouchImage@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,10 +167,20 @@
 			children = (
 				162D89AE19AC8A3000E30F19 /* GSTouchesShowingWindow.h */,
 				162D89AF19AC8A3000E30F19 /* GSTouchesShowingWindow.m */,
-				162D89B019AC8A3000E30F19 /* GSTouchImage.png */,
-				162D89B119AC8A3000E30F19 /* GSTouchImage@2x.png */,
+				B09122C21B0F4F4100EE48D8 /* Resources */,
 			);
 			name = "Touches showing window";
+			sourceTree = "<group>";
+		};
+		B09122C21B0F4F4100EE48D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B09122C31B0F4F4100EE48D8 /* GSTouchImage@1x.png */,
+				B09122C41B0F4F4100EE48D8 /* GSTouchImage@2x.png */,
+				B09122C51B0F4F4100EE48D8 /* GSTouchImage@3x.png */,
+			);
+			name = Resources;
+			path = ../../Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,10 +260,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				162D898819AA481D00E30F19 /* Images.xcassets in Resources */,
-				162D89B419AC8A3000E30F19 /* GSTouchImage@2x.png in Resources */,
+				B09122C81B0F4F4100EE48D8 /* GSTouchImage@3x.png in Resources */,
+				B09122C61B0F4F4100EE48D8 /* GSTouchImage@1x.png in Resources */,
 				162D897A19AA481D00E30F19 /* InfoPlist.strings in Resources */,
 				162D898319AA481D00E30F19 /* Main.storyboard in Resources */,
-				162D89B319AC8A3000E30F19 /* GSTouchImage.png in Resources */,
+				B09122C71B0F4F4100EE48D8 /* GSTouchImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 #import "GSTouchesShowingWindow.h"
 
-#define TOUCH_IMAGE_NAME        @"GSTouchImage.png"
+#define TOUCH_IMAGE_NAME        @"GSTouchImage"
 
 @interface GSTouchImageViewQueue : NSObject
 
@@ -141,9 +141,13 @@
 
 - (id)initWithTouchesCount:(NSUInteger)count {
     if (self = [super init]) {
+        NSBundle *bundle = [NSBundle bundleForClass:[GSTouchesShowingWindow class]];
+        NSString *name = [NSString stringWithFormat:@"%@@%.0fx", TOUCH_IMAGE_NAME, [UIScreen mainScreen].scale];
+        NSString *path = [bundle pathForResource:name ofType:@"png"];
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
         self.backingArray = [[NSMutableArray alloc] init];
         for (NSUInteger i = 0; i < count; i++) {
-            UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:TOUCH_IMAGE_NAME]];
+            UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
             [self.backingArray addObject:imgView];
         }
     }

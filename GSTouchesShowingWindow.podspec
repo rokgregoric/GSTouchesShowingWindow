@@ -8,5 +8,6 @@ Pod::Spec.new do |s|
   s.author   = { 'Lukáš Petr' => 'http://www.glimsoft.com' }
   s.source   = { :git => 'https://github.com/LukasCZ/GSTouchesShowingWindow', :tag => s.version.to_s }
   s.source_files = 'GSTouchesShowingWindow.{h,m}'
+  s.resources = 'Resources/*'
   s.requires_arc = true
 end
