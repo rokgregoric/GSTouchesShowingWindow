@@ -141,10 +141,15 @@
 
 - (id)initWithTouchesCount:(NSUInteger)count {
     if (self = [super init]) {
-        NSBundle *bundle = [NSBundle bundleForClass:[GSTouchesShowingWindow class]];
-        NSString *name = [NSString stringWithFormat:@"%@@%.0fx", TOUCH_IMAGE_NAME, [UIScreen mainScreen].scale];
-        NSString *path = [bundle pathForResource:name ofType:@"png"];
-        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        // Load assets included in the project
+        UIImage *image = [UIImage imageNamed:TOUCH_IMAGE_NAME];
+        if(!image) {
+            // Load assets embeded in the framework
+            NSBundle *bundle = [NSBundle bundleForClass:[GSTouchesShowingWindow class]];
+            NSString *name = [NSString stringWithFormat:@"%@@%.0fx", TOUCH_IMAGE_NAME, [UIScreen mainScreen].scale];
+            NSString *path = [bundle pathForResource:name ofType:@"png"];
+            image = [UIImage imageWithContentsOfFile:path];
+        }
         self.backingArray = [[NSMutableArray alloc] init];
         for (NSUInteger i = 0; i < count; i++) {
             UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
